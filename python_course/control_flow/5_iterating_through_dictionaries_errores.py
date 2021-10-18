@@ -6,7 +6,7 @@ fruits = ['apples', 'oranges', 'pears', 'peaches', 'grapes', 'bananas'] #list
 for object, count in basket_items.items(): #add items method for dictionaries to get key,value
     if object in fruits:
         result += count
-        print("There are {} fruits".format(result))
+print("There are {} fruits".format(result))
 
 #ERROOOR ITERATION PRINT: DEPENDE DONDE LO PONGO SALE X VECES
 
