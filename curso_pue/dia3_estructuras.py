@@ -287,3 +287,7 @@ for p in num:
         itemps.append(p)
 
 print ','.join(items)
+
+https://lms.pue.es/pluginfile.php/82874/mod_resource/content/1/ejercicios_1.pdf
+
+https://github.com/zhiwehu/Python-programming-exercises/blob/master/100%2B%20Python%20challenging%20programming%20exercises.txt
