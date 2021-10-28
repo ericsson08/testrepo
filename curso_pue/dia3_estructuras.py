@@ -190,9 +190,9 @@ res = []
 lst = n.split(',')
 import math
 for value in lst:
-    q = round((2*c*int(value))/h)**0.5)
+    q = round((2*c*int(value))/h)**0.5) #opcion 1
 
-    #q = math.sqrt((2*c*int(value))(h))
+    #q = math.sqrt((2*c*int(value))(h)) #opcion 2
     res.append(q)
 print(",".join(res))
 
@@ -253,8 +253,13 @@ print()
 
 #PREGUNTA 6
 
-n = without,hello,bag,world
-Solution:
+n = "without,hello,bag,world"
+#Solution:
+
+z = n.split(',')
+z.sort()
+print(','.join(z))
+
 items=[x for x in raw_input().split(',')]
 items.sort()
 print ','.join(items)
@@ -287,6 +292,135 @@ for p in num:
         itemps.append(p)
 
 print ','.join(items)
+
+#PREGUNTA 9
+
+values = []
+for i in range(1000, 3001):
+    s = str(i)
+    if (int(s[0])%2==0) and (int(s[1])%2==0) and (int(s[2])%2==0) and (int(s[3])%2==0):
+        values.append(s)
+print ",".join(values)
+
+
+#Otras formas
+
+lst = []
+for i in range (1000,3000):
+    s = str(i) #convertir en string para poder ver cada digito / PARA PODER ITERERAR / ARRAY
+    #if (int(s[0])%2==0) and (int(s[1])%2==0) and (int(s[2])%2==0) and (int(s[3])%2==0):
+        #lst.append(s)
+    todossonpares = True
+    for digit in i2:
+        if int(digit) %2 !=0:
+            todossonpares = False
+
+    if todossonpares:
+        lst.append(str(i2))
+
+    for digit in i2:
+        if int(digit) %2 !=0:
+            break
+    else:
+        lst.append(str(i2))
+
+#LIST COMPRENSIONS
+
+lst = []
+lst = [str(i) for i in range (1000,3001) if not any([int(digit) %2 !=0 for digit in str(i)])]
+print(lst)
+
+#PREGUNTA 10
+
+str = "hello world! 123"
+
+for s in str:
+    print s
+
+s = "hello world! 123"
+d = 0
+l = 0
+for c in s:
+    if c.isdigit():
+        d +=1
+    elif c.isalpha():
+        l +=1
+    else:
+        pass
+print ("LETTERS", l)
+print ("DIGITS", d)
+
+s = "Hello world!"
+u = 0
+l = 0
+# u,l = 0,0
+# countL = countN = 0
+
+for i in s:
+    if i.isupper():
+        u += 1
+    elif i.islower():
+        l += 1
+    else:
+        pass
+print("UPPER", u)
+print("LOWER", l)
+
+
+#PREGUNTA 13
+
+#OPCION 1
+
+value = "9"
+n1 = value * 1 #9
+n2 = value * 2 #99
+n3 = value * 3 #999
+n4 = value * 4 #9999
+
+total = int(n1) + int(n2) + int(n3) + int(n4)
+print(total)
+
+#OPCION 2
+arr = []
+for i in range(1,5):
+    arr.append(int(value*1))
+total = sum(arr)
+print(total)
+
+total = sum([int(value*1) for i in range(1,5)])
+print(total)
+
+
+#PREGUNTA 14
+
+s = "1,2,3,4,5,6,7,8,9"
+lst = []
+
+for num in s.split(","):
+    if int(num) % 2 != 0:
+            lst.append(num**2)
+
+print(','.join(lst))
+
+
+#pregunta 15
+
+saldo = 0
+
+while True:
+    oper=input("introduce importe con d o W(fin para finalizar: ").split(" ")
+    if oper[0]=="D":
+        saldo=saldo + int(oper[1])
+    elif oper[0]=="W":
+        saldo=saldo-int(oper[1])
+    elif oper[0]=="fin":
+        break
+    else:
+        print("Opción no válida")
+    print("su saldo es", saldo)
+print("su saldo es", saldo)
+
+#pregunta 16
 
 https://lms.pue.es/pluginfile.php/82874/mod_resource/content/1/ejercicios_1.pdf
 
