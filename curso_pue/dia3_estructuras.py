@@ -422,6 +422,64 @@ print("su saldo es", saldo)
 
 #pregunta 16
 
+passwords = "ABd1234@1,a F1#,2w3E*,2We3345".split(",")
+passwordsOK = []
+
+for password in passwords: #opción 1
+    passwordOK = True
+    if len(password)>6 and len(password)<=12:
+        pass
+    else:
+        passwordOK = False
+    if (passwordOK.append(password))
+
+print(",".join(passwordsOK))
+
+for password in passwords: #opción 2
+    if len(password)<6 or len(password)>12:#primero descartamos lo que no nos vale
+        continue
+    elif password.isupper() or password.islower() or password.isdigit(): #!!con esto me ahorraria hacer un for(de abajo)
+        continue
+
+#regular expresions
+    if not re.search("[a-z]", password)#tienes alguna letra minuscula?
+     continue
+    if not re.search("[A-Z]", password)#tienes alguna letra mayus?
+      continue
+    if not re.search("[0-9]", password)#tienes algun numero?
+      continue
+    if not re.search("[$#@]", password)#tienes algun specialChars?
+      continue
+
+    passwordsOK.append(password)
+
+    #Esta es la versión sin expresiones regulares
+    #donde tenemos que ser capaces de confirmar que se cumplen las 4 condiciones
+    # tener almenos una mayus, minus, num y special
+    tenemosMayus = False
+    tenemosMinus = False
+    tenemosEspecial = False
+    tenemosNum = False
+    for letter in password: #recorrer todas las letras para las condiciones individuales
+        if letter.isupper()
+            tenemosMayus = True
+        elif letter.islower():
+            tenemosMinus = True
+        elif letter.isdigit():
+            tenemosNum = True
+        elif letter in specialChars:
+            tenemosEspecial = introduce
+
+        if tenemosMayus and tenemosMinus and tenemosNum and tenemosEspecial: #si tenemos todas las condiciones, sé que la contraseña es correcta
+            passwordsOK.append(password)
+
+            break
+
+    passwordsOK.append(password)
+
+
+
+
 https://lms.pue.es/pluginfile.php/82874/mod_resource/content/1/ejercicios_1.pdf
 
 https://github.com/zhiwehu/Python-programming-exercises/blob/master/100%2B%20Python%20challenging%20programming%20exercises.txt
