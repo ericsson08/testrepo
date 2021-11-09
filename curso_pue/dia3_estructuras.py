@@ -289,16 +289,16 @@ for p in num:
     x = int(p, 2)
     #if not x%5:
     if x%5 ==0:
-        itemps.append(p)
+        items.append(p)
 
 print ','.join(items)
 
 #PREGUNTA 9
 
 values = []
-for i in range(1000, 3001):
-    s = str(i)
-    if (int(s[0])%2==0) and (int(s[1])%2==0) and (int(s[2])%2==0) and (int(s[3])%2==0):
+for i in range(1000, 3001): #sacamos los numeros que queremos trabajar
+    s = str(i) #convertimos cada uno de los numeros en texto para poder trabajar cada uno de los digitos
+    if (int(s[0])%2==0) and (int(s[1])%2==0) and (int(s[2])%2==0) and (int(s[3])%2==0): #condit
         values.append(s)
 print ",".join(values)
 
@@ -442,6 +442,7 @@ for password in passwords: #opción 2
         continue
 
 #regular expresions
+# la logica de la negacion o excepcion, si no cumple una condicion ya no es correcta
     if not re.search("[a-z]", password)#tienes alguna letra minuscula?
      continue
     if not re.search("[A-Z]", password)#tienes alguna letra mayus?
